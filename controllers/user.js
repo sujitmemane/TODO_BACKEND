@@ -7,14 +7,7 @@ import { ErrorHandler } from "../middlewares/error.js"
 
 
 
-export const getAllUsers = async (req, res) => {
 
-}
-
-
-export const getUser = async (req, res) => {
-
-}
 
 export const getMyProfile = (req, res,next) => {
 
