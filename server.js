@@ -8,4 +8,4 @@ connectDB()
 
 console.log(process.env.PORT)
 
-app.listen(process.env.PORT,()=>console.log("Server Running!")
+app.listen(process.env.PORT,()=>console.log("Server Running!"))
