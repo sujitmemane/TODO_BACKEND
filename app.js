@@ -15,7 +15,12 @@ dotenv.config({
 
 
 export  const  app = express()
-app.use(cors())
+app.use(cors({
+   origin: '*',
+		methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+		allowedHeaders: ['secretHeader'],
+		credentials: true,
+}))
 app.use(express.json())
 app.use(cookieParser())
 app.use("/api/v1/users",userRouter)
