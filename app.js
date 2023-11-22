@@ -19,7 +19,7 @@ export  const  app = express()
 
 app.use(
   cors({
-    origin: "*",
+    origin: "https://fullstack-todo-ten.vercel.app/",
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
