@@ -16,10 +16,18 @@ dotenv.config({
 
 export const app = express()
 app.use(cors({
-    origin: "*",
+    origin: (origin, callback) => {
+       
+        const allowedOrigins = ["https://fullstack-todo-ten.vercel.app/", "https://fullstack-todo-ten.vercel.app/login","https://fullstack-todo-ten.vercel.app/register"];
+        if (!origin || allowedOrigins.includes(origin)) {
+            callback(null, true);
+        } else {
+            callback(new Error("Not allowed by CORS"));
+        }
+    },
     credentials: true,
+}));
 
-}))
 app.use(express.json())
 app.use(cookieParser())
 app.use("/api/v1/users", userRouter)
