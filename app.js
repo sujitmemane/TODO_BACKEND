@@ -15,7 +15,7 @@ dotenv.config({
 
 
 export const app = express()
-const allowedOriginBase = "https://fullstack-todo-ten.vercel.app";
+const allowedOriginBase = "http://localhost:5173/";
 
 app.use(cors({
     origin: (origin, callback) => {
