@@ -18,14 +18,15 @@ export const app = express()
 const allowedOriginBase = "http://localhost:5173/";
 
 app.use(cors({
-    origin: (origin, callback) => {
-        const isAllowed = !origin || origin.startsWith(allowedOriginBase);
-        if (isAllowed) {
-            callback(null, true);
-        } else {
-            callback(new Error("Not allowed by CORS"));
-        }
-    },
+    // origin: (origin, callback) => {
+    //     const isAllowed = !origin || origin.startsWith(allowedOriginBase);
+    //     if (isAllowed) {
+    //         callback(null, true);
+    //     } else {
+    //         callback(new Error("Not allowed by CORS"));
+    //     }
+    // },
+    origin:"*",
     credentials: true,
 }));
 
