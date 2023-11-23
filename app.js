@@ -16,7 +16,7 @@ dotenv.config({
 
 export const app = express()
 app.use(cors({
-    origin: "https://todobackend-aw6o.onrender.com/",
+    origin: "https://todobackend-aw6o.onrender.com/api/v1/users/me",
 
 }))
 app.use(express.json())
